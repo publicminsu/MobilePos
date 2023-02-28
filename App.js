@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, ScrollView} from 'react-native';
 
 import {Header, PricingCard} from 'react-native-elements';
-import FoodCard from './src/FoodCard';
+import FoodCard from './src/MenuCard';
 import Menu from './src/views/Menu';
 
 const App = () => {

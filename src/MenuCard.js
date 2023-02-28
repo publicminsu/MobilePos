@@ -2,7 +2,7 @@ import React from 'react';
 import {ActivityIndicator, StyleSheet, View} from 'react-native';
 import {PricingCard} from 'react-native-elements';
 import {Text, Card, Button, Icon} from '@rneui/themed';
-const FoodCard = props => {
+const MenuCard = props => {
   return (
     <Card wrapperStyle={styles.card}>
       <View style={styles.container}>
@@ -35,4 +35,4 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
 });
-export default FoodCard;
+export default MenuCard;
