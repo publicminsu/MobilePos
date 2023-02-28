@@ -7,7 +7,9 @@ const MenuCard = props => {
     <Card wrapperStyle={styles.card}>
       <View style={styles.container}>
         <Card.Title>{props.title}</Card.Title>
-        <Text style={styles.text}>{props.text}</Text>
+        <View>
+          <Text style={styles.text}>{props.text}</Text>
+        </View>
       </View>
       <Card.Image
         style={styles.image}

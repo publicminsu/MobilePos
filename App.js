@@ -3,12 +3,12 @@ import {StyleSheet, ScrollView} from 'react-native';
 
 import {Header, PricingCard} from 'react-native-elements';
 import FoodCard from './src/MenuCard';
-import Menu from './src/views/Menu';
+import Store from './src/views/Store';
 
 const App = () => {
   return (
     <>
-      <Menu></Menu>
+      <Store></Store>
     </>
   );
 };

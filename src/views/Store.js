@@ -2,6 +2,7 @@ import React from 'react';
 import {ScrollView, StyleSheet} from 'react-native';
 import {Tab, TabView} from '@rneui/themed';
 import MenuCard from '../MenuCard';
+import ReviewCard from '../ReviewCard';
 const menus = [
   {
     title: '돈까스',
@@ -12,10 +13,29 @@ const menus = [
     text: '이것이 마약 파스타\n대마 함유\n가격 12,000원',
   },
 ];
-const Menu = () => {
+const reviews = [
+  {
+    title: '구름이',
+    text: '너무 맛있었다',
+    rating: 5,
+  },
+  {
+    title: '구르니',
+    text: '너무 맛있다',
+    rating: 4,
+  },
+];
+const Store = () => {
   const [index, setIndex] = React.useState(0);
   const menuList = menus.map(menu => (
     <MenuCard key={menu.title} title={menu.title} text={menu.text}></MenuCard>
+  ));
+  const reviewList = reviews.map(review => (
+    <ReviewCard
+      key={review.title}
+      title={review.title}
+      text={review.text}
+      rating={review.rating}></ReviewCard>
   ));
   return (
     <>
@@ -28,6 +48,10 @@ const Menu = () => {
         <TabView.Item style={styles.tabViewItem}>
           <ScrollView>{menuList}</ScrollView>
         </TabView.Item>
+        <TabView.Item style={styles.tabViewItem}></TabView.Item>
+        <TabView.Item style={styles.tabViewItem}>
+          <ScrollView>{reviewList}</ScrollView>
+        </TabView.Item>
       </TabView>
     </>
   );
@@ -37,4 +61,4 @@ const styles = StyleSheet.create({
     width: '100%',
   },
 });
-export default Menu;
+export default Store;
