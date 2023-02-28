@@ -1,5 +1,6 @@
 import React from 'react';
-import {ScrollView, StyleSheet} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
+import {Header} from 'react-native-elements';
 import {Tab, TabView} from '@rneui/themed';
 import MenuCard from '../MenuCard';
 import ReviewCard from '../ReviewCard';
@@ -10,6 +11,22 @@ const menus = [
   },
   {
     title: '파스타',
+    text: '이것이 마약 파스타\n대마 함유\n가격 12,000원',
+  },
+  {
+    title: '치킨',
+    text: '육즙이 잘좔좔....겉바속촉 감동의 맛.... 손님 울었음\n가격 13,000원',
+  },
+  {
+    title: '토스트',
+    text: '이것이 마약 파스타\n대마 함유\n가격 12,000원',
+  },
+  {
+    title: '옥수수',
+    text: '육즙이 잘좔좔....겉바속촉 감동의 맛.... 손님 울었음\n가격 13,000원',
+  },
+  {
+    title: '햄버거',
     text: '이것이 마약 파스타\n대마 함유\n가격 12,000원',
   },
 ];
@@ -46,7 +63,16 @@ const Store = () => {
       </Tab>
       <TabView value={index} onChange={setIndex} animationType="spring">
         <TabView.Item style={styles.tabViewItem}>
-          <ScrollView>{menuList}</ScrollView>
+          <ScrollView>
+            <View>
+              <Header
+                centerComponent={{
+                  text: '대표 메뉴',
+                  style: {color: '#fff', fontSize: 20, flex: 1},
+                }}></Header>
+              {menuList}
+            </View>
+          </ScrollView>
         </TabView.Item>
         <TabView.Item style={styles.tabViewItem}></TabView.Item>
         <TabView.Item style={styles.tabViewItem}>
